@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,16 +43,20 @@
                     <img src="<c:url value="/img/iphone.png"/>" alt="">
                 </div>
                 <div class="register span6">
-                    <form action="" method="post">
+                    <form:form  action="/icab/saveOrder" method="POST" modelAttribute="orderDetails">
                         <h2>Order  <span class="red"><strong>Plz</strong></span></h2>
-						<label for="mobileNo">Mobile No:</label>
-                        <input type="text" id="mobileNo" name="mobileNo" placeholder="pls enter your mobile no..">
-						<label for="email">Email</label>
-                        <input type="text" id="email" name="email" placeholder="enter your email...">				
-						<label for="lastname">Full Name</label>
-                        <input type="text" id="fullname" name="fullname" placeholder="enter your full name...">
+                        
+						<form:label for="mobileNo" path="user.mobile">Mobile No:</form:label>
+                        <form:input type="text" id="mobileNo" name="mobileNo" placeholder="pls enter your mobile no.." path="user.mobile"/>
 						
-						<label for="day">Select City and Sub Area</label>
+						<form:label for="email" path="user.email">Email</form:label>
+                        <form:input type="text" id="email" name="email" placeholder="enter your email..." path="user.email" />				
+						
+						<form:label for="lastname" path="user.fullName">Full Name</form:label>
+					<form:input type="text" id="fullname" name="fullname"
+						placeholder="enter your full name..." path="user.fullName" />
+
+					<label for="day">Select City and Sub Area</label>
 					<select class="form-control" id="city">
 							<option>City1</option>
 							<option>City1</option>							
@@ -103,7 +108,7 @@
 
                        
                         <button type="submit">REGISTER</button>
-                    </form>
+                    </form:form>
                 </div>
             </div>
         </div>

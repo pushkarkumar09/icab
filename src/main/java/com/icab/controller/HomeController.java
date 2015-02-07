@@ -7,8 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HomeController {
 
 	@RequestMapping(value = "/")
-	public String showHome() {
-		return "register";
+	public String showHome() {		
+		return "redirect:/placeOrder";
+
 	}
 
 }
