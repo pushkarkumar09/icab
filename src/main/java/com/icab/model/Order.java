@@ -42,4 +42,21 @@ public class Order {
 		this.orderStatus = orderStatus;
 	}
 
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Order [type=");
+		builder.append(type);
+		builder.append(", description=");
+		builder.append(description);
+		builder.append(", deliveryDetails=");
+		builder.append(deliveryDetails);
+		builder.append(", orderStatus=");
+		builder.append(orderStatus);
+		builder.append("]");
+		return builder.toString();
+	}
+	
+	
+
 }

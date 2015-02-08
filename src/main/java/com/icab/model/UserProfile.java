@@ -39,4 +39,21 @@ public class UserProfile {
 		this.address = address;
 	}
 
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("UserProfile [fullName=");
+		builder.append(fullName);
+		builder.append(", mobile=");
+		builder.append(mobile);
+		builder.append(", email=");
+		builder.append(email);
+		builder.append(", address=");
+		builder.append(address);
+		builder.append("]");
+		return builder.toString();
+	}
+	
+	
+
 }

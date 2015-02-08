@@ -30,6 +30,20 @@ public class OrderDetails {
 	public void setOrder(Order order) {
 		this.order = order;
 	}
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("OrderDetails [id=");
+		builder.append(id);
+		builder.append(", user=");
+		builder.append(user);
+		builder.append(", order=");
+		builder.append(order);
+		builder.append("]");
+		return builder.toString();
+	}
+	
+	
 
 	
 

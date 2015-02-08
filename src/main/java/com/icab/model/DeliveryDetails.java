@@ -1,35 +1,51 @@
 package com.icab.model;
 
-import java.util.Date;
+import com.icab.constant.PrefferedDay;
+import com.icab.constant.PreffredTime;
 
 public class DeliveryDetails {
 
-	private Date date;
-	private String prefferedTime;
+	private PrefferedDay prefferedDay;
+	private PreffredTime prefferedTime;
 	private Address prefferedLocation;
-
-	public Date getDate() {
-		return date;
+	
+	public PrefferedDay getPrefferedDay() {
+		return prefferedDay;
 	}
 
-	public String getPrefferedTime() {
+	public void setPrefferedDay(PrefferedDay prefferedDay) {
+		this.prefferedDay = prefferedDay;
+	}
+
+	public PreffredTime getPrefferedTime() {
 		return prefferedTime;
 	}
 
 	public Address getPrefferedLocation() {
 		return prefferedLocation;
-	}
+	}	
 
-	public void setDate(Date date) {
-		this.date = date;
-	}
-
-	public void setPrefferedTime(String prefferedTime) {
+	public void setPrefferedTime(PreffredTime prefferedTime) {
 		this.prefferedTime = prefferedTime;
 	}
 
 	public void setPrefferedLocation(Address prefferedLocation) {
 		this.prefferedLocation = prefferedLocation;
 	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("DeliveryDetails [prefferedDay=");
+		builder.append(prefferedDay);
+		builder.append(", prefferedTime=");
+		builder.append(prefferedTime);
+		builder.append(", prefferedLocation=");
+		builder.append(prefferedLocation);
+		builder.append("]");
+		return builder.toString();
+	}
+	
+	
 
 }

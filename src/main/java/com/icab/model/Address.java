@@ -48,4 +48,23 @@ public class Address {
 		this.state = state;
 	}
 
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Address [addressLine1=");
+		builder.append(addressLine1);
+		builder.append(", addressLine2=");
+		builder.append(addressLine2);
+		builder.append(", city=");
+		builder.append(city);
+		builder.append(", pinCode=");
+		builder.append(pinCode);
+		builder.append(", state=");
+		builder.append(state);
+		builder.append("]");
+		return builder.toString();
+	}
+	
+	
+
 }
